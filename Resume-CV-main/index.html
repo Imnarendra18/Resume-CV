@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narendra Yadav - Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .profile-badge {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen flex flex-col items-center justify-center p-6 space-y-8 text-white">
+
+  <!-- PROFILE PREVIEW -->
+  <div class="glass-card rounded-3xl p-8 max-w-md w-full shadow-2xl border-white/20 text-center">
+    <div class="space-y-4">
+      <div class="profile-badge mx-auto mb-6">NY</div>
+      <h1 class="text-3xl font-bold bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+        Narendra Kumar Yadav
+      </h1>
+      <p class="text-xl opacity-90">AI with Data Science</p>
+      <div class="space-y-2">
+        <p class="text-lg font-semibold bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+          Full Stack Developer
+        </p>
+        <p class="text-sm opacity-80">RK University | Rajkot</p>
+        <p>2023 - 2027</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW FULL PROFILE BUTTON -->
+  <button id="revealBtn" class="glass-card px-12 py-5 rounded-2xl text-white font-semibold text-lg shadow-xl border-white/20 hover:bg-white/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 mx-auto">
+    <span>👁️ View Full Profile</span>
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    </svg>
+  </button>
+
+  <!-- PROFILE MODAL -->
+  <div id="profileModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-6 z-50">
+    <div class="glass-card max-w-4xl max-h-[90vh] w-full rounded-3xl p-8 lg:p-12 overflow-y-auto shadow-2xl border-white/30">
+
+      <!-- Close -->
+      <button onclick="closeModal()" class="absolute top-6 right-6 text-white/70 hover:text-white text-2xl font-bold p-2 hover:bg-white/10 rounded-xl transition-all">×</button>
+
+      <!-- HEADER -->
+      <div class="text-center mb-10 pb-8 border-b border-white/10">
+        <div class="profile-badge w-28 h-28 mx-auto mb-6 inline-flex text-3xl">NY</div>
+        <h1 class="text-4xl font-black bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent mb-2">
+          Narendra Kumar Yadav
+        </h1>
+        <p class="text-xl opacity-90">@Imnarendra</p>
+        <p class="text-lg mt-2 opacity-80">Full Stack Developer</p>
+        <p class="text-lg mt-2 opacity-80">AI with Data Science</p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-2xl mb-3">📱</div>
+          <p class="font-bold text-xl">+91 9274160249</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-2xl mb-3">✉️</div>
+          <p class="font-bold text-xl break-words">nyadav862@rku.ac.in</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-2xl mb-3">📍</div>
+          <p class="font-bold text-xl">Rajkot, Gujarat</p>
+        </div>
+        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-2xl mb-3">🌐</div>
+          <a href="https://github.com/Imnarendra18" target="_blank" class="font-bold text-xl hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent mb-6 text-center">🎓 Education</h3>
+        <div class="space-y-4">
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+            <h4 class="font-bold text-xl mb-2">B.Tech Computer Science & Engineering</h4>
+            <p class="opacity-90 mb-1"><strong>RK University, Rajkot</strong></p>
+            <p class="text-sm opacity-75">2023 - Present</p>
+            <p class="text-sm opacity-75"><a href="https://rku.ac.in/" target="_blank" class="underline hover:no-underline text-blue-300">RK University Official Site</a></p>
+          </div>
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+            <h4 class="font-bold text-xl mb-2">HSC - Valmiki Shiksha Sadan</h4>
+            <p class="text-sm opacity-75"><a href="https://www.valmiki.edu.np/" target="_blank" class="underline hover:no-underline text-blue-300">Valmiki Shiksha Sadan</a></p>
+          </div>
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+            <h4 class="font-bold text-xl mb-2">SSC - New Guidance Higher Secondary</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent mb-6 text-center">💻 Core Skills</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">C#</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">ASP.NET</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">Flutter</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">React.js</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">PHP</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">SQL Server</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">MongoDB</span>
+          <span class="px-4 py-3 bg-white/10 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">Windows Forms</span>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="mb-10">
+        <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent mb-6 text-center">🚀 Featured Projects</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <h4 class="font-bold text-xl mb-3">🍕 Food Delivery App</h4>
+            <p class="opacity-90 mb-3">Complete Flutter app with real-time tracking</p>
+            <div class="flex gap-2">
+              <span class="px-2 py-1 bg-pink-500/20 text-pink-200 text-xs rounded-full">Flutter</span>
+              <span class="px-2 py-1 bg-blue-500/20 text-blue-200 text-xs rounded-full">Firebase</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <h4 class="font-bold text-xl mb-3">🛒 Online Shopping (PHP)</h4>
+            <p class="opacity-90 mb-3">Full e-commerce with payment gateway</p>
+            <div class="flex gap-2">
+              <span class="px-2 py-1 bg-purple-500/20 text-purple-200 text-xs rounded-full">PHP</span>
+              <span class="px-2 py-1 bg-blue-500/20 text-blue-200 text-xs rounded-full">MySQL</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <h4 class="font-bold text-xl mb-3">🏟️ Online Sport Shopping</h4>
+            <p class="opacity-90 mb-3">E-commerce platform for sports products</p>
+            <div class="flex gap-2">
+              <span class="px-2 py-1 bg-purple-500/20 text-purple-200 text-xs rounded-full">PHP</span>
+              <span class="px-2 py-1 bg-blue-500/20 text-blue-200 text-xs rounded-full">MySQL</span>
+            </div>
+            <a href="https://github.com/Imnarendra18" target="_blank" class="underline text-blue-300 text-sm">View on GitHub</a>
+          </div>
+
+          <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <h4 class="font-bold text-xl mb-3">📚 Book Management System</h4>
+            <p class="opacity-90 mb-3">Desktop app built with .NET for managing books and inventory</p>
+            <div class="flex gap-2">
+              <span class="px-2 py-1 bg-gray-500/20 text-gray-200 text-xs rounded-full">.NET</span>
+            </div>
+            <a href="https://github.com/Imnarendra18" target="_blank" class="underline text-blue-300 text-sm">View on GitHub</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-white/10 justify-center">
+        <a href="https://github.com/Imnarendra18" target="_blank" class="flex-1 bg-white/10 px-8 py-4 rounded-xl font-bold text-center hover:bg-white/20 hover:shadow-xl transition-all border border-white/20">
+          📂 GitHub Portfolio
+        </a>
+        <button onclick="printResume()" class="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-4 rounded-xl font-bold text-center hover:shadow-2xl hover:scale-105 transition-all text-white">
+          🖨️ Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const revealBtn = document.getElementById('revealBtn');
+    const modal = document.getElementById('profileModal');
+
+    revealBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function printResume() {
+      window.print();
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
